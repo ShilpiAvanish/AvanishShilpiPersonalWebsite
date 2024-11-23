@@ -1,0 +1,19 @@
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2vw;
+  }
+  
+  .achievement-card {
+    padding: 2vw;
+    font-size: 1vw;
+  }
+  
+  .achievement-card h3 {
+    font-size: 2vw;
+  }
+  
+  .achievement-card ul {
+    font-size: 1vw;
+  }
+  

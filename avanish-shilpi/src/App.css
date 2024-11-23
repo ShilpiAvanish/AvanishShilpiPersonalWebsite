@@ -1,0 +1,17 @@
+/* General Scaling */
+html {
+  font-size: 16px; /* Default font size for scaling */
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 5vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}

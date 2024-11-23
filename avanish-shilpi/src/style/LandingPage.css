@@ -1,0 +1,154 @@
+/* Landing Page Styling */
+.landing-page {
+  display: flex;
+  justify-content: space-between; /* Space between text and image sections */
+  align-items: center; /* Vertically center content */
+  height: 90vh; /* Ensure the height of the page is 100% of the viewport */
+  padding: 0 5vw; /* Optional: Add horizontal padding */
+}
+
+
+.text-section {
+  flex: 1;
+  max-width: 75%; /* Text section occupies half the width */
+}
+
+.greeting {
+  font-size: calc(.75vw + 0.5vh); /* Dynamic font size */
+  margin-bottom: 1rem;
+  color:#555555;
+  font-weight: bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.name {
+  font-size: calc(3vw + 1vh); /* Scales with screen size */
+  margin: 0;
+  font-weight:bolder;
+  margin-bottom: 1rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   /* Vibrant red inspired by the image */
+}
+
+.role {
+  font-size: calc(1.5vw + 0.5vh); /* Scales dynamically */
+  margin: 0.5rem 0;
+  color: #ff4c4c;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   /* Vibrant red inspired by the image */
+
+}
+
+.description {
+  font-size: calc(1vw + 0.4vh); /* Responsive description size */
+  color: #555555; /* Neutral dark grey for readability */
+}
+
+.cta-button {
+  padding: calc(0.8vw + 0.5vh) calc(1.5vw + 0.5vh); /* Button padding scales dynamically */
+  font-size: calc(1vw + 0.5vh); /* Responsive button text */
+  background-color: #ff4c4c; /* Vibrant red background for the button */
+  color: #ffffff; /* White text for high contrast */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #007bff; /* Switch to deep blue on hover */
+  transform: translateY(-3px);
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Push image to the far right */
+  align-items: center;
+}
+
+.star-wars-image {
+  width: calc(25vw + 15vh); /* Dynamically grows/shrinks with screen size */
+  max-width: 100%; /* Restrict max size relative to the screen width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .landing-page {
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+  }
+
+  .text-section {
+    max-width: 90%; /* Text section widens for smaller screens */
+    padding-left: 0; /* Remove left padding for centering */
+    text-align: center;
+  }
+
+  .image-section {
+    padding-right: 0; /* Remove right padding */
+    margin-top: 2rem;
+  }
+
+  .star-wars-image {
+    width: calc(35vw + 8vh); /* Resize image for tablets */
+    max-width: 300px; /* Ensure it doesn’t grow too large */
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting {
+    font-size: calc(2vw + 0.5vh); /* Slightly larger for small screens */
+  }
+
+  .name {
+    font-size: calc(4vw + 1vh); /* Scale up name for better visibility */
+  }
+
+  .role {
+    font-size: calc(2.5vw + 0.5vh);
+  }
+
+  .description {
+    font-size: calc(1.5vw + 0.4vh);
+  }
+
+  .cta-button {
+    font-size: calc(1.2vw + 0.5vh);
+    padding: calc(0.6vw + 0.5vh) calc(1vw + 0.5vh);
+  }
+
+  .star-wars-image {
+    width: calc(40vw + 5vh); /* Resize image further for smaller screens */
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting {
+    font-size: calc(3vw + 0.5vh);
+  }
+
+  .name {
+    font-size: calc(5vw + 1vh);
+  }
+
+  .role {
+    font-size: calc(3vw + 0.5vh);
+  }
+
+  .description {
+    font-size: calc(1.8vw + 0.4vh);
+  }
+
+  .cta-button {
+    font-size: calc(1.5vw + 0.5vh);
+    padding: calc(0.4vw + 0.5vh) calc(0.8vw + 0.5vh);
+  }
+
+  .star-wars-image {
+    width: calc(50vw + 5vh); /* Largest size for mobile */
+    max-width: 200px; /* Ensure it stays small enough */
+  }
+}

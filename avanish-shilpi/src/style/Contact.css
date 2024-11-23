@@ -1,0 +1,20 @@
+.contact-card {
+    flex-wrap: wrap;
+    padding: 2vw;
+    font-size: 1.2vw;
+    text-align: center;
+  }
+  
+  .contact-image {
+    width: 10vw;
+    height: 10vw;
+  }
+  
+  .contact-info h3 {
+    font-size: 2vw;
+  }
+  
+  .contact-info p {
+    font-size: 1.2vw;
+  }
+  
