@@ -11,14 +11,14 @@ export default function LandingPage() {
         <h2 className="role">SOFTWARE ENGINEER</h2>
         <p className="description">
          JavaScript • Python • React • Django • Apache Kafka • MySQL • AWS <b/>
-         Computer Science at University of Texas at Austin
+         Computer Science at University of Texas at Austin 🤘
         </p>
     
         <button
           className="cta-button"
           onClick={() => window.open("https://example.com/your-cv.pdf", "_blank")}
         >
-          Check Out My CV!
+          CHECK OUT MY CV!
         </button>
       </div>
       <div className="image-section">

@@ -4,7 +4,9 @@ import LandingPage from "./LandingPage";
 import Projects from "./Projects";
 import Achievements from "./Achievements";
 import Contact from "./Contact";
+import AboutMe from "./AboutMe"
 import "./App.css";
+import Experience from "./Experience";
 
 function App() {
   return (
@@ -12,6 +14,15 @@ function App() {
       {/* <Navbar /> */}
       {/* Landing Page */}
       <LandingPage />
+      {/* Projects Section */}
+      <section id="AboutMe">
+        <AboutMe />
+      </section>
+
+      {/* Projects Section */}
+      <section id="Experience">
+        <Experience />
+      </section>
 
       {/* Projects Section */}
       <section id="projects">

@@ -1,0 +1,73 @@
+/* Experience Section */
+.experience-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Light background */
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .experience-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #ffffff; /* Ensures proper contrast */
+  }
+  
+  .experience-content {
+    flex: 1;
+  }
+  
+  .experience-title-role {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .experience-title-role span {
+    color: #e63946; /* Bright red for company name */
+    font-weight: normal;
+  }
+  
+  .experience-duration {
+    font-size: 1rem;
+    color: #888888;
+    margin: 0.5rem 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .experience-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .experience-logo img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
