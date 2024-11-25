@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style/Experience.css"; // CSS for styling
 import Disney from "./images/Disney.png"; // Replace with your logo path
 import InternNest from "./images/internnestpic.png"; // Replace with your logo path
@@ -33,9 +33,31 @@ export default function Experience() {
     },
   ];
 
+  // Add scroll animation using Intersection Observer
+  useEffect(() => {
+    const items = document.querySelectorAll(".experience-item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger animation when 20% of the element is visible
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect(); // Cleanup observer on unmount
+  }, []);
+
   return (
     <section className="experience-section">
-      <h2 className="experience-title">Experience</h2>
+      <h2 className="experience-title">EXPERIENCE -</h2>
       <div className="experience-container">
         {experiences.map((experience, index) => (
           <div className="experience-item" key={index}>

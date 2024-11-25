@@ -29,11 +29,6 @@ function App() {
         <Projects />
       </section>
 
-      {/* Achievements Section */}
-      <section id="achievements">
-        <Achievements />
-      </section>
-
       {/* Contact Section */}
       <section id="contact">
         <Contact />

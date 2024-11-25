@@ -1,25 +1,36 @@
 import React from "react";
-import "./style/Contact.css";
+import "./style/Contact.css"; // CSS for styling
+import GitHubLogo from "./images/github.png"; // Replace with your GitHub logo image
+import LinkedInLogo from "./images/linkedin.png"; // Replace with your LinkedIn logo image
+import ResumeLogo from "./images/resume.png"; // Replace with your resume logo image
 
 export default function Contact() {
   return (
     <section className="contact-section">
-      <h2>Contact</h2>
-      <div className="contact-card">
-        <img
-          src="https://via.placeholder.com/100"
-          alt="profile"
-          className="contact-image"
-        />
-        <div className="contact-info">
-          <h3>Avanish Shilpi</h3>
-          <p>Email: avanish.shilpi@utexas.edu</p>
-          <p>Phone: +1 832-928-2486</p>
-          <div className="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-          </div>
-        </div>
+      {/* Contact Title */}
+      <h2 className="contact-title">CONTACT -</h2>
+
+      {/* Contact Icons */}
+      <div className="contact-icons">
+        {/* GitHub Logo */}
+        <a href="https://github.com/ShilpiAvanish" target="_blank" rel="noopener noreferrer" className="contact-icon">
+          <img src={GitHubLogo} alt="GitHub" />
+        </a>
+
+        {/* LinkedIn Logo */}
+        <a href="https://www.linkedin.com/in/avanish-shilpi/" target="_blank" rel="noopener noreferrer" className="contact-icon">
+          <img src={LinkedInLogo} alt="LinkedIn" />
+        </a>
+
+        {/* Resume Logo */}
+        <a href="https://drive.google.com/file/d/1pe_qWw7AZ4aWPNmflV50kLcwdodO_aTa/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="contact-icon">
+          <img src={ResumeLogo} alt="Resume" />
+        </a>
+      </div>
+
+      {/* Email */}
+      <div className="contact-email">
+        <a href="mailto:avanish.shilpi@utexas.edu">avanish.shilpi@utexas.edu</a>
       </div>
     </section>
   );

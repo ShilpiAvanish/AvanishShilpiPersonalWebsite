@@ -3,46 +3,36 @@ import "./style/Projects.css";
 
 const projects = [
   {
-    title: "Android & iOS Apps",
-    description: "Development of 3 cross-platform mobile apps made with Apache Cordova.",
-    links: [
-      { name: "Canary Enjoy", url: "#" },
-      { name: "Gabbeach App", url: "#" },
-      { name: "Pensione Alicante App", url: "#" },
-    ],
-    technologies: ["Android", "iOS", "Apache Cordova", "PHP"],
-    background: "linear-gradient(to right, #00c6ff, #0072ff)",
+    title: "BridgeBill",
+    description:
+      "Engineered a web app that helps patients identify medical bill discrepancies by automating CPT code extraction & analysis using the American Medical Association API, achieving 76% accuracy in identifying discrepancies.",
+    technologies: ["Angular", "JavaScript", "Flask", "REST API", "PostgreSQL", "AWS"],
   },
   {
-    title: "E-Commerce Websites",
+    title: "Quant AI Trading Bot",
     description:
-      "Development and maintenance of 3 e-commerce websites powered by CodeIgniter.",
-    links: [
-      { name: "pistasta.it", url: "#" },
-      { name: "sicilyprodottitipici.it", url: "#" },
-      { name: "donoccasion.es", url: "#" },
+      "Developed an autonomous stock trading bot using Long Short-Term Memory (LSTM) networks to analyze high-frequency historical intraday stock data, achieving a 62% accuracy in predicting intraday stock trends.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MySQL",
+      "Python",
+      "TensorFlow",
     ],
-    technologies: ["PHP", "CodeIgniter", "MySQL"],
-    background: "linear-gradient(to right, #9f00ff, #ff9a00)",
   },
   {
-    title: "Blogs & Landings",
+    title: "Skin Cancer Detection",
     description:
-      "Development of 2 blogs and this portfolio. Used Nuxt.js (Vue) & Webpack.",
-    links: [
-      { name: "ambidestro.it", url: "#" },
-      { name: "pnzdevs.com", url: "#" },
-      { name: "tiapnn.netlify.app", url: "#" },
-    ],
-    technologies: ["Node.js", "Vue.js", "Webpack"],
-    background: "linear-gradient(to right, #ff6a00, #ee0979)",
+      "Created a machine learning model to classify skin lesions with an ROC AUC score of 0.87, processing ISIC images. Designed and optimized a convolutional neural network (CNN) in PyTorch using hyperparameter tuning and data augmentation.",
+    technologies: ["Python", "PyTorch", "Scikit-Learn"],
   },
 ];
 
 export default function Projects() {
   return (
     <section className="projects-section">
-      <h2>My Projects</h2>
+      <h2 className="project-title">MY PROJECTS -</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div
@@ -52,18 +42,13 @@ export default function Projects() {
           >
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <ul>
-              {project.links.map((link, i) => (
-                <li key={i}>
-                  <a href={link.url}>{link.name}</a>
+            <ul className="technologies-list">
+              {project.technologies.map((tech, i) => (
+                <li key={i} className="tech-tag">
+                  {tech}
                 </li>
               ))}
             </ul>
-            <div className="technologies">
-              {project.technologies.map((tech, i) => (
-                <span key={i}>{tech}</span>
-              ))}
-            </div>
           </div>
         ))}
       </div>
