@@ -16,14 +16,14 @@ const projects = [
     title: "InternNest",
     date: "2024",
     description:
-      "Built a full-stack web app to help interns find roommates and housing in new cities; implemented user profiles, map-based listings, and matching logic using Next.js, Firebase, and Tailwind CSS.",
+      "Web app to help interns find roommates and housing in cities they are relocating to",
     image: InternNestImg,
   },
   {
     title: "BridgeBill",
     date: "2024 - Present",
     description:
-      "Engineered a web app that helps patients identify medical bill discrepancies by automating CPT code extraction & analysis using the American Medical Association API, achieving 76% accuracy in identifying discrepancies.",
+      "AI-powered web app to help patients identify discrepancies in medical bills",
     image: BridgeBillImg,
   },
 ];
