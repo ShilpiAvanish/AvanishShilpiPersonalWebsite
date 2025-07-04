@@ -33,27 +33,11 @@ export default function AboutMe() {
       <div className="about-me-container">
         <div className="about-me-right">
           <div className="about-me-bubble">
-            <p>Hey there, I'm Avanish!</p>
-            <p>
-              I'm a student at{" "}
-              <span style={{ color: "#ff3e09", fontWeight: "bold" }}>
-                University of Texas at Austin
-              </span>{" "}
-              pursuing a degree in{" "}
-              <span style={{ color: "#ff3e09", fontWeight: "bold" }}>
-                Computer Science
-              </span>{" "}
-              and Minors in Law & Business Administration. I’m interested in
-              Software Engineering, Web Development, and Big Data.
-            </p>
-            <p>
-              I love meeting new people and am always eager to learn from
-              others, so feel free to reach me at{" "}
-              <a href="mailto:avanish.shilpi@utexas.edu">
-                avanish.shilpi@utexas.edu
-              </a>
-              .
-            </p>
+            <p><strong><span className="ut-link">Student at UT Austin</span></strong></p>
+            <p><strong>Major:</strong> Computer Science</p>
+            <p><strong>Minors:</strong> Law &amp; Business Administration</p>
+            <p><strong>Interests:</strong> Artificial Intelligence & Machine Learning</p>
+            <p><strong>Contact:</strong> <a href="mailto:avanish.shilpi@utexas.edu">avanish.shilpi@utexas.edu</a></p>
           </div>
         </div>
         <div className="about-me-left">

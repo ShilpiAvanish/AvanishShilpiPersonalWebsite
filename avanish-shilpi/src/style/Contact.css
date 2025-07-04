@@ -46,3 +46,39 @@
 .contact-email a:hover {
   text-decoration: underline;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1.2rem;
+  }
+  .contact-title {
+    font-size: 1.3rem;
+  }
+  .contact-icon img {
+    width: 32px;
+    height: 32px;
+  }
+  .contact-email a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 0.7rem;
+  }
+  .contact-title {
+    font-size: 1.1rem;
+  }
+  .contact-icons {
+    gap: 1rem;
+  }
+  .contact-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  .contact-email a {
+    font-size: 0.9rem;
+  }
+}

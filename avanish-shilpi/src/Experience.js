@@ -4,14 +4,28 @@ import Disney from "./images/Disney.png"; // Replace with your logo path
 import InternNest from "./images/internnestpic.png"; // Replace with your logo path
 import Tecmend from "./images/tecmend.png"; // Replace with your logo path
 import UTLogo from "./images/utlogo.png"; // Replace with your logo path
+import GithubLogo from "./images/githublogo.png"; // GitHub logo
+import SalesforceLogo from "./images/salesforce.png"; // Salesforce logo
 
 export default function Experience() {
   const experiences = [
     {
+      logo: SalesforceLogo,
+      company: "Salesforce",
+      title: "AI Engineer Intern",
+      duration: "Summer 2025",
+    },
+    {
+      logo: GithubLogo,
+      company: "GitHub",
+      title: "AI/ML Engineer Intern",
+      duration: "Spring 2025",
+    },
+    {
       logo: Disney,
       company: "The Walt Disney Company",
-      title: "Software Engineer Intern",
-      duration: "May 2024–August 2024",
+      title: "ML Engineer Intern",
+      duration: "Summer 2024",
     },
     {
       logo: InternNest,
@@ -19,18 +33,9 @@ export default function Experience() {
       title: "Co-Founder",
       duration: "Jan 2024–Present",
     },
-    {
-      logo: Tecmend,
-      company: "Tecmend",
-      title: "Full-Stack Software Engineer Intern",
-      duration: "June 2023–August 2023",
-    },
-    {
-      logo: UTLogo,
-      company: "UT Austin Meyer's Lab",
-      title: "Data Analyst",
-      duration: "Sept 2023–Dec 2023",
-    },
+   
+    
+    
   ];
 
   // Add scroll animation using Intersection Observer

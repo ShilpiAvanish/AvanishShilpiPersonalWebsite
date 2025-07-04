@@ -23,7 +23,7 @@ export default function Contact() {
         </a>
 
         {/* Resume Logo */}
-        <a href="https://drive.google.com/file/d/1pe_qWw7AZ4aWPNmflV50kLcwdodO_aTa/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="contact-icon">
+        <a href="https://drive.google.com/file/d/1CiACLeWgiMTjqMBT-WNp--t_E0vwaLjx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="contact-icon">
           <img src={ResumeLogo} alt="Resume" />
         </a>
       </div>

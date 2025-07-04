@@ -16,7 +16,7 @@ export default function LandingPage() {
         <a href="https://www.linkedin.com/in/avanish-shilpi/" target="_blank" rel="noopener noreferrer">
           <img src={LinkedInLogo} alt="LinkedIn" className="icon" />
         </a>
-        <a href="https://drive.google.com/file/d/1pe_qWw7AZ4aWPNmflV50kLcwdodO_aTa/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/1CiACLeWgiMTjqMBT-WNp--t_E0vwaLjx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
           <img src={ResumeLogo} alt="Resume" className="icon" />
         </a>
       </div>
@@ -32,7 +32,7 @@ export default function LandingPage() {
         </p>
         <button
           className="cta-button"
-          onClick={() => window.open("https://drive.google.com/file/d/1pe_qWw7AZ4aWPNmflV50kLcwdodO_aTa/view?usp=sharing", "_blank")}
+          onClick={() => window.open("https://drive.google.com/file/d/1CiACLeWgiMTjqMBT-WNp--t_E0vwaLjx/view?usp=sharing", "_blank")}
         >
           CHECK OUT MY CV!
         </button>

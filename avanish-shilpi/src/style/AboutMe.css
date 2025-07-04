@@ -85,6 +85,11 @@
   text-decoration: underline;
 }
 
+.ut-link {
+  color: #ff3e09;
+  /* Match the default link color or adjust if your links use a different color */
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .about-me-container {
