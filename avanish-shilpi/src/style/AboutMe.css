@@ -3,37 +3,36 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding: 0rem 3rem;
-  opacity: 0; /* Initially hidden for animation */
-  transform: translateY(30px); /* Start slightly below */
+  padding: clamp(0.5rem, 3vw, 3rem);
+  opacity: 0;
+  transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Add visible class when scrolled into view */
 .about-me-section.visible {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Reset position */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-me-title-container {
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
 }
 
 .about-me-title {
-  font-size: 1.75rem;
+  font-size: clamp(1.2rem, 4vw, 1.75rem);
   color: #415d79;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
-  letter-spacing: .2rem;
-  margin-left: -5%;
+  letter-spacing: 0.2rem;
+  margin-left: clamp(-2rem, -5vw, -5%);
 }
 
 .about-me-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2rem);
   width: 100%;
-  max-width: 1200px;
+  max-width: min(1200px, 95vw);
 }
 
 .about-me-left {
@@ -44,7 +43,7 @@
 }
 
 .about-me-image {
-  width: calc(15vw + 12vh);
+  width: clamp(120px, 25vw, calc(15vw + 12vh));
   height: auto;
   border-radius: 15%;
   object-fit: cover;
@@ -61,16 +60,16 @@
 .about-me-bubble {
   background: #ffffff;
   border-radius: 15px;
-  padding: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 450px;
+  max-width: clamp(300px, 60vw, 450px);
   width: 100%;
   margin-bottom: 1rem;
 }
 
 .about-me-bubble p {
-  margin: 0 0 1rem 0;
-  font-size: 1.05rem;
+  margin: 0 0 clamp(0.5rem, 2vw, 1rem) 0;
+  font-size: clamp(0.9rem, 2.8vw, 1.05rem);
   color: #333333;
   line-height: 1.6;
 }
@@ -79,56 +78,115 @@
   color: #ff3e09;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: clamp(0.9rem, 2.8vw, 1.05rem);
 }
 
 .about-me-bubble a:hover {
   text-decoration: underline;
 }
 
+.about-me-bubble strong {
+  font-size: clamp(0.9rem, 2.8vw, 1.05rem);
+}
+
 .ut-link {
   color: #ff3e09;
-  /* Match the default link color or adjust if your links use a different color */
 }
 
-.about-me-bubble strong {
-  font-size: 1.05rem;
-}
-
-/* Responsive Design */
+/* Tablet breakpoint */
 @media (max-width: 1024px) {
   .about-me-container {
-      flex-direction: column-reverse;
-      align-items: center;
-      gap: 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 1.5rem);
   }
 
   .about-me-image {
-      width: 50%;
+    width: clamp(150px, 30vw, 50%);
   }
-}
-
-@media (max-width: 768px) {
+  
   .about-me-bubble {
-    max-width: 67.5%;
-    padding: 1.1rem;
-  }
-
-  .about-me-image {
-      width: 70%;
+    max-width: clamp(350px, 70vw, 500px);
   }
 }
 
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .about-me-section {
+    padding: clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .about-me-title {
+    margin-left: clamp(-1rem, -3vw, -2rem);
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+  }
+
+  .about-me-bubble {
+    max-width: clamp(280px, 85vw, 400px);
+    padding: clamp(0.8rem, 3vw, 1.2rem);
+  }
+  
+  .about-me-bubble p {
+    font-size: clamp(0.85rem, 3.2vw, 1rem);
+  }
+  
+  .about-me-bubble a,
+  .about-me-bubble strong {
+    font-size: clamp(0.85rem, 3.2vw, 1rem);
+  }
+
+  .about-me-image {
+    width: clamp(120px, 35vw, 70%);
+  }
+}
+
+/* Small mobile breakpoint */
 @media (max-width: 480px) {
   .about-me-title {
-      font-size: 2rem;
+    font-size: clamp(1rem, 6vw, 1.3rem);
+    margin-left: clamp(-0.5rem, -2vw, -1rem);
   }
 
   .about-me-bubble {
-      padding: 1.5rem;
+    padding: clamp(0.7rem, 4vw, 1rem);
+    max-width: clamp(250px, 90vw, 350px);
+  }
+  
+  .about-me-bubble p {
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+    margin-bottom: clamp(0.3rem, 1.5vw, 0.7rem);
+  }
+  
+  .about-me-bubble a,
+  .about-me-bubble strong {
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
   }
 
   .about-me-image {
-      width: 80%;
+    width: clamp(100px, 40vw, 60%);
+  }
+  
+  .about-me-container {
+    gap: clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+/* Extra small mobile breakpoint */
+@media (max-width: 360px) {
+  .about-me-bubble {
+    padding: clamp(0.6rem, 5vw, 0.8rem);
+  }
+  
+  .about-me-bubble p {
+    font-size: clamp(0.75rem, 4vw, 0.9rem);
+  }
+  
+  .about-me-bubble a,
+  .about-me-bubble strong {
+    font-size: clamp(0.75rem, 4vw, 0.9rem);
+  }
+  
+  .about-me-image {
+    width: clamp(80px, 45vw, 50%);
   }
 }

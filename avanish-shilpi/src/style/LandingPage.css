@@ -3,69 +3,71 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90vh;
-  padding: 0 5vw;
-  position: relative; /* Necessary for absolute positioning of top-right icons */
+  height: clamp(80vh, 90vh, 95vh);
+  padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 5vw, 5vw);
+  position: relative;
 }
 
 /* Top-right icons */
 .top-right-icons {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: clamp(0.5rem, 2vw, 1rem);
+  right: clamp(0.5rem, 2vw, 1rem);
   display: flex;
-  gap: 2rem; /* Space between icons */
+  gap: clamp(1rem, 3vw, 2rem);
 }
 
 .icon {
-  width: 40px; /* Slightly smaller size */
-  height: 40px;
+  width: clamp(30px, 8vw, 40px);
+  height: clamp(30px, 8vw, 40px);
   object-fit: contain;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .icon:hover {
-  transform: scale(1.2); /* Slightly smaller enlargement on hover */
+  transform: scale(1.2);
 }
 
 .text-section {
   flex: 1;
-  max-width: 75%;
+  max-width: clamp(60%, 75%, 80%);
 }
 
 .greeting {
-  font-size: calc(1vw + 0.5vh);
-  margin-bottom: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, calc(1vw + 0.5vh));
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
   color: #555555;
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
 }
 
 .name {
-  font-size: calc(4vw + 2vh);
+  font-size: clamp(2rem, 8vw, calc(4vw + 2vh));
   margin: 0;
   font-weight: 1000;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+  line-height: 1.1;
 }
 
 .role {
-  font-size: calc(1.25vw + 0.5vh);
-  margin: 0.5rem 0;
+  font-size: clamp(1rem, 3vw, calc(1.25vw + 0.5vh));
+  margin: clamp(0.3rem, 1vw, 0.5rem) 0;
   color: #ff3e09;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .description {
-  font-size: calc(1vw + 0.4vh);
+  font-size: clamp(0.9rem, 2.5vw, calc(1vw + 0.4vh));
   color: #555555;
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+  line-height: 1.4;
 }
 
 .cta-button {
-  padding: calc(0.6vw + 0.5vh) calc(2.5vw + 0.5vh);
-  font-size: calc(0.7vw + 0.5vh);
+  padding: clamp(0.5rem, 2vw, calc(0.6vw + 0.5vh)) clamp(1.5rem, 4vw, calc(2.5vw + 0.5vh));
+  font-size: clamp(0.8rem, 2.5vw, calc(0.7vw + 0.5vh));
   background-color: #ff3e09;
   color: #ffffff;
   border: none;
@@ -88,66 +90,168 @@
 }
 
 .star-wars-image {
-  width: calc(21vw + 15vh);
+  width: clamp(150px, 40vw, calc(21vw + 15vh));
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  padding-right: 5%;
-  padding-top: 8%;
+  padding-right: clamp(2%, 5%, 5%);
+  padding-top: clamp(4%, 8%, 8%);
 }
 
-/* Responsive Adjustments */
+/* Tablet breakpoint */
 @media (max-width: 1024px) {
   .landing-page {
     flex-direction: column;
     justify-content: center;
+    height: auto;
+    min-height: clamp(70vh, 80vh, 85vh);
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
   }
 
   .text-section {
-    max-width: 90%;
+    max-width: clamp(80%, 90%, 95%);
     text-align: center;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
   }
 
   .image-section {
-    margin-top: 2rem;
+    margin-top: clamp(1rem, 3vw, 2rem);
+    justify-content: center;
   }
 
   .star-wars-image {
-    width: calc(20vw + 8vh);
+    width: clamp(200px, 50vw, calc(20vw + 8vh));
     max-width: 300px;
+    padding-right: 0;
+    padding-top: 0;
   }
 
   .top-right-icons {
-    top: 1.25rem;
-    right: 1.25rem;
+    top: clamp(0.5rem, 2vw, 1.25rem);
+    right: clamp(0.5rem, 2vw, 1.25rem);
   }
 
   .icon {
-    width: 40px;
-    height: 40px; /* Adjust size for smaller screens */
+    width: clamp(30px, 8vw, 40px);
+    height: clamp(30px, 8vw, 40px);
   }
 }
 
+/* Mobile breakpoint */
 @media (max-width: 768px) {
+  .landing-page {
+    padding: clamp(1rem, 4vw, 1.5rem) clamp(0.5rem, 2vw, 1rem);
+    min-height: clamp(60vh, 70vh, 75vh);
+  }
+  
+  .text-section {
+    max-width: 95%;
+  }
+  
+  .name {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+  }
+  
+  .greeting {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+  
+  .role {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  }
+  
+  .description {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+  
+  .cta-button {
+    padding: clamp(0.4rem, 2.5vw, 0.6rem) clamp(1.2rem, 5vw, 1.8rem);
+    font-size: clamp(0.75rem, 3vw, 0.9rem);
+  }
+
   .icon {
-    width: 35px;
-    height: 35px;
+    width: clamp(25px, 7vw, 35px);
+    height: clamp(25px, 7vw, 35px);
   }
 
   .star-wars-image {
-    width: calc(30vw + 5vh);
+    width: clamp(120px, 60vw, 200px);
     max-width: 250px;
   }
 }
 
+/* Small mobile breakpoint */
 @media (max-width: 480px) {
+  .landing-page {
+    padding: clamp(0.5rem, 3vw, 1rem) clamp(0.3rem, 1.5vw, 0.5rem);
+    min-height: clamp(50vh, 60vh, 65vh);
+  }
+  
+  .text-section {
+    max-width: 98%;
+  }
+  
+  .name {
+    font-size: clamp(1.5rem, 12vw, 2rem);
+  }
+  
+  .greeting {
+    font-size: clamp(0.7rem, 3.5vw, 0.9rem);
+  }
+  
+  .role {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
+  
+  .description {
+    font-size: clamp(0.75rem, 3.5vw, 0.9rem);
+    margin-bottom: clamp(0.8rem, 4vw, 1.5rem);
+  }
+  
+  .cta-button {
+    padding: clamp(0.35rem, 3vw, 0.5rem) clamp(1rem, 6vw, 1.5rem);
+    font-size: clamp(0.7rem, 3.5vw, 0.85rem);
+  }
+
   .icon {
-    width: 30px;
-    height: 30px;
+    width: clamp(20px, 6vw, 30px);
+    height: clamp(20px, 6vw, 30px);
   }
 
   .star-wars-image {
-    width: calc(50vw + 5vh);
+    width: clamp(100px, 70vw, 150px);
     max-width: 200px;
+  }
+  
+  .top-right-icons {
+    gap: clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+/* Extra small mobile breakpoint */
+@media (max-width: 360px) {
+  .name {
+    font-size: clamp(1.3rem, 14vw, 1.8rem);
+  }
+  
+  .greeting {
+    font-size: clamp(0.65rem, 4vw, 0.8rem);
+  }
+  
+  .role {
+    font-size: clamp(0.75rem, 4.5vw, 0.95rem);
+  }
+  
+  .description {
+    font-size: clamp(0.7rem, 4vw, 0.85rem);
+  }
+  
+  .cta-button {
+    padding: clamp(0.3rem, 3.5vw, 0.45rem) clamp(0.8rem, 7vw, 1.3rem);
+    font-size: clamp(0.65rem, 4vw, 0.8rem);
+  }
+  
+  .star-wars-image {
+    width: clamp(80px, 80vw, 120px);
   }
 }

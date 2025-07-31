@@ -1,21 +1,21 @@
 .projects-section {
-  padding: 1.8rem 0 1.8rem 0;
+  padding: clamp(1rem, 3vw, 1.8rem) 0;
   font-family: "Arial", sans-serif;
 }
 
 .project-title {
-  font-size: 1.575rem;
+  font-size: clamp(1.2rem, 4vw, 1.575rem);
   color: #415d79;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-  letter-spacing: .2rem;
-  margin-left: 2vw;
-  margin-bottom: 2.7rem;
+  letter-spacing: 0.2rem;
+  margin-left: clamp(1rem, 2vw, 2vw);
+  margin-bottom: clamp(1.5rem, 4vw, 2.7rem);
 }
 
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: clamp(2rem, 6vw, 4.5rem);
   width: 100%;
 }
 
@@ -25,9 +25,9 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  max-width: 990px;
+  max-width: min(990px, 95vw);
   margin: 0 auto;
-  min-height: 234px;
+  min-height: clamp(180px, 25vh, 234px);
   position: relative;
 }
 
@@ -36,28 +36,28 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 2.25rem;
+  gap: clamp(1rem, 3vw, 2.25rem);
 }
 
 .project-number {
-  font-size: 0.99rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.99rem);
   color: #bdbdbd;
   font-family: 'Menlo', 'Consolas', monospace;
-  margin-right: 1.5rem;
+  margin-right: clamp(0.5rem, 2vw, 1.5rem);
   margin-top: 0.2rem;
-  min-width: 2.25rem;
+  min-width: clamp(1.5rem, 4vw, 2.25rem);
   letter-spacing: 0.1em;
 }
 
 .project-meta {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 .project-name {
   font-family: 'Menlo', 'Consolas', monospace;
-  font-size: 1.215rem;
+  font-size: clamp(1rem, 3vw, 1.215rem);
   font-weight: 700;
   letter-spacing: 0.04em;
   margin: 0 0 0.2rem 0;
@@ -65,16 +65,17 @@
 }
 
 .project-date {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   color: #757575;
   margin-bottom: 0.5rem;
 }
 
 .project-description {
-  font-size: 0.945rem;
+  font-size: clamp(0.85rem, 2.8vw, 0.945rem);
   color: #222;
-  margin-bottom: 1.08rem;
-  max-width: 360px;
+  margin-bottom: clamp(0.8rem, 2vw, 1.08rem);
+  max-width: clamp(280px, 80vw, 360px);
+  line-height: 1.5;
 }
 
 .project-link {
@@ -91,12 +92,12 @@
 }
 
 .project-image-container {
-  flex: 0 0 342px;
+  flex: 0 0 clamp(200px, 40vw, 342px);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-width: 234px;
-  min-height: 162px;
+  min-width: clamp(180px, 35vw, 234px);
+  min-height: clamp(120px, 20vh, 162px);
 }
 
 .project-image-placeholder {
@@ -115,38 +116,94 @@
 
 .project-image {
   width: 100%;
-  max-width: 306px;
-  height: 162px;
+  max-width: clamp(180px, 35vw, 306px);
+  height: clamp(100px, 18vh, 162px);
   object-fit: cover;
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
   background: #eaeaea;
   display: block;
 }
 
+.project-divider {
+  width: clamp(80px, 20vw, 120px);
+  height: 2px;
+  background: #888;
+  margin: clamp(0.8rem, 2vw, 1.1rem) 0 0.2rem 0;
+  border-radius: 2px;
+}
+
+/* Tablet breakpoint */
 @media (max-width: 900px) {
   .project-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    gap: clamp(1.5rem, 4vw, 2rem);
     min-height: unset;
   }
+  
   .project-image-container {
     justify-content: flex-start;
     min-width: 0;
     width: 100%;
   }
-  .project-image-placeholder {
-    width: 100%;
-    min-width: 0;
-    max-width: 306px;
+  
+  .project-image {
+    max-width: clamp(250px, 60vw, 306px);
     margin: 0 auto;
+  }
+  
+  .project-description {
+    max-width: clamp(300px, 85vw, 400px);
   }
 }
 
-.project-divider {
-  width: 120px;
-  height: 2px;
-  background: #888;
-  margin: 1.1rem 0 0.2rem 0;
-  border-radius: 2px;
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  .projects-section {
+    padding: clamp(0.5rem, 2vw, 1rem) 0;
+  }
+  
+  .project-title {
+    margin-left: clamp(0.5rem, 2vw, 1rem);
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .project-info {
+    flex-direction: column;
+    gap: clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .project-number {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    max-width: 100%;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
+  
+  .project-image {
+    max-width: 100%;
+    height: clamp(120px, 25vh, 150px);
+  }
+  
+  .project-divider {
+    width: clamp(60px, 25vw, 100px);
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 400px) {
+  .project-name {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+  
+  .project-description {
+    font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+  }
+  
+  .project-image {
+    height: clamp(100px, 20vh, 120px);
+  }
 }

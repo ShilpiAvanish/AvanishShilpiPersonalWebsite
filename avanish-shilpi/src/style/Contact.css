@@ -4,81 +4,151 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  background-color: #f8f9fa; /* Light gray background */
+  padding: clamp(1rem, 3vw, 2rem);
+  background-color: #f8f9fa;
   font-family: 'Arial', sans-serif;
 }
 
 .contact-title {
-  font-size: 1.75rem;
-  color: #415d79; /* Dark navy for the title */
+  font-size: clamp(1.2rem, 4vw, 1.75rem);
+  color: #415d79;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
   letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  text-align: center;
 }
 
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Space between logos */
-  margin-bottom: 1rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  flex-wrap: wrap;
 }
 
 .contact-icon img {
-  width: 40px; /* Set logo size */
-  height: 40px;
+  width: clamp(30px, 8vw, 40px);
+  height: clamp(30px, 8vw, 40px);
   object-fit: contain;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .contact-icon img:hover {
-  transform: scale(1.2); /* Slightly enlarge on hover */
-  opacity: 0.8; /* Add a fade effect on hover */
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
 .contact-email a {
-  font-size: 1rem;
-  color: #00bfa6; /* Match highlight color */
+  font-size: clamp(0.9rem, 2.8vw, 1rem);
+  color: #00bfa6;
   text-decoration: none;
   transition: text-decoration 0.3s ease;
+  text-align: center;
+  word-break: break-word;
 }
 
 .contact-email a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Tablet breakpoint */
+@media (max-width: 900px) {
   .contact-section {
-    padding: 1.2rem;
+    padding: clamp(0.8rem, 3vw, 1.5rem);
   }
+  
   .contact-title {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    margin-bottom: clamp(0.4rem, 2.5vw, 0.8rem);
   }
+  
+  .contact-icons {
+    gap: clamp(0.8rem, 3.5vw, 1.5rem);
+    margin-bottom: clamp(0.4rem, 2.5vw, 0.8rem);
+  }
+  
   .contact-icon img {
-    width: 32px;
-    height: 32px;
+    width: clamp(28px, 7vw, 35px);
+    height: clamp(28px, 7vw, 35px);
   }
+  
   .contact-email a {
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
   }
 }
 
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: clamp(0.6rem, 4vw, 1.2rem);
+  }
+  
+  .contact-title {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    margin-bottom: clamp(0.3rem, 3vw, 0.6rem);
+  }
+  
+  .contact-icons {
+    gap: clamp(0.6rem, 4vw, 1rem);
+    margin-bottom: clamp(0.3rem, 3vw, 0.6rem);
+  }
+  
+  .contact-icon img {
+    width: clamp(25px, 6vw, 32px);
+    height: clamp(25px, 6vw, 32px);
+  }
+  
+  .contact-email a {
+    font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+  }
+}
+
+/* Small mobile breakpoint */
 @media (max-width: 480px) {
   .contact-section {
-    padding: 0.7rem;
+    padding: clamp(0.4rem, 5vw, 0.7rem);
   }
+  
   .contact-title {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 6vw, 1.1rem);
+    margin-bottom: clamp(0.2rem, 3.5vw, 0.4rem);
   }
+  
   .contact-icons {
-    gap: 1rem;
+    gap: clamp(0.4rem, 5vw, 0.6rem);
+    margin-bottom: clamp(0.2rem, 3.5vw, 0.4rem);
   }
+  
   .contact-icon img {
-    width: 24px;
-    height: 24px;
+    width: clamp(20px, 5vw, 24px);
+    height: clamp(20px, 5vw, 24px);
   }
+  
   .contact-email a {
-    font-size: 0.9rem;
+    font-size: clamp(0.75rem, 4vw, 0.85rem);
+  }
+}
+
+/* Extra small mobile breakpoint */
+@media (max-width: 360px) {
+  .contact-section {
+    padding: clamp(0.3rem, 6vw, 0.5rem);
+  }
+  
+  .contact-title {
+    font-size: clamp(0.8rem, 7vw, 1rem);
+  }
+  
+  .contact-icons {
+    gap: clamp(0.3rem, 6vw, 0.5rem);
+  }
+  
+  .contact-icon img {
+    width: clamp(18px, 6vw, 22px);
+    height: clamp(18px, 6vw, 22px);
+  }
+  
+  .contact-email a {
+    font-size: clamp(0.7rem, 4.5vw, 0.8rem);
   }
 }
